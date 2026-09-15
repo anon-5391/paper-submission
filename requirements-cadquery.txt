@@ -1,0 +1,15 @@
+# CadQuery environment — Stage 1 (CAD generation).
+# Install into a SEPARATE env from SOFA's Python, then point $CQ_PYTHON at it.
+#   conda create -n cq python=3.11 && conda activate cq && pip install -r requirements-cadquery.txt
+#
+# SOFA's own Python (runs dup.py / main.py) only needs numpy and is provided by
+# the SOFA build, not by pip — see README.md.
+#
+# matplotlib is not required by anything in this folder (the plotting scripts
+# sweep_cli.py best-effort-calls at the end of a sweep aren't included here —
+# see the README's Parameter sweeps section) but is harmless to keep if you
+# add your own analysis on top.
+
+cadquery
+numpy
+matplotlib
