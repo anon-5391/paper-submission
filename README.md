@@ -1,4 +1,4 @@
-# TDCR SOFA simulation pipeline
+# SWEEP: Simulation Workflow for Evaluating Elastomeric Performance
 
 Automated pipeline for designing, meshing and simulating **tendon-driven
 continuum robots (TDCRs)** in [SOFA](https://www.sofa-framework.org/), and
