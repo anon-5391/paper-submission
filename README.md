@@ -368,6 +368,23 @@ the sim-time cable count. `backbone_dia`, `overlap`, `tendon_radius`,
 
 ---
 
+## Citations
+ 
+This pipeline is built on top of the third-party software below. 
+ 
+| Software | Role in this pipeline | Repository |
+|---|---|---|
+| **SOFA** | FEM simulation engine — Stage 3 (`main.py`, `tdcr_model.py`) | [github.com/sofa-framework/sofa](https://github.com/sofa-framework/sofa) |
+| **SofaPython3** | Python 3 scripting bindings for SOFA scenes, used by every stage | [github.com/sofa-framework/SofaPython3](https://github.com/sofa-framework/SofaPython3) |
+| **CGALPlugin** | SOFA wrapper exposing `MeshGenerationFromPolyhedron` — Stage 2 STL → tetrahedral VTK (`dup.py`) | [github.com/sofa-framework/CGALPlugin](https://github.com/sofa-framework/CGALPlugin) |
+| **CGAL** | Computational-geometry / mesh-generation library underlying `CGALPlugin` | [github.com/CGAL/cgal](https://github.com/CGAL/cgal) |
+| **STLIB** (`stlib3`) | Scene-building utilities — `MainHeader`, `ElasticMaterialObject`, `FixedBox`, `splib3` | [github.com/SofaDefrost/STLIB](https://github.com/SofaDefrost/STLIB) |
+| **SoftRobots** | `PullingCable` tendon/cable actuator constraint (`tdcr_model.py`) | [github.com/SofaDefrost/SoftRobots](https://github.com/SofaDefrost/SoftRobots) |
+| **CadQuery** | Parametric CAD generation of the notched backbone — Stage 1 (`caddesign.py`, `generate_design.py`) | [github.com/CadQuery/cadquery](https://github.com/CadQuery/cadquery) |
+| **NumPy** | Array/numeric backend used throughout the pipeline | [github.com/numpy/numpy](https://github.com/numpy/numpy) |
+
+---
+
 ## Notes
 
 - **Force vs displacement.** `pipeline_config.py` currently ships in `"force"`
